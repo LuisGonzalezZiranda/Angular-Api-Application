@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="card-group">
+        <div class="card-body" style="width: 18rem;" *ngFor="let pelicula of peliculas">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/{{pelicula.poster_path}}" class="card-img-top"
+                alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{pelicula.title}}</h5>
+                <p class="card-text" style="text-overflow: ellipsis;">{{pelicula.overview}}</p>
+                <a href="movies/{{pelicula.id}}" class="btn btn-primary">Ver detalles</a>
+            </div>
+        </div>
+    </div>
+</div>
